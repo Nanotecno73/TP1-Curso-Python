@@ -24,21 +24,21 @@
         .logo{
             background-color: #F9E897;
             text-align: center;
-
+            
         }
         .nav{
             background-color: #F9E897;
             text-align: center;
-    
+                
         }
-        .social{
+        .carrito{
             background-color: #F9E897;
             text-align: center;
         }
 
 .section {
     background-color: #7F9F80;
-    text-align: center;
+    
         
 }
     .productos{
@@ -48,6 +48,22 @@
     }
     .producto{
         background-color: #F9E897;
+        display: grid;
+        align-items: center;
+        text-align: center
+    
+        
+
+    }
+
+    .texto-principal{
+        text-align: center;
+
+    }
+
+    .texto-secundario{
+        text-align: center;
+        
     }
 
 .footer {
