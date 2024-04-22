@@ -3,48 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Celu Shop</title>
+    <title>WFM Celulares</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+
     <div class="padre">
+
         <header class="header">
             <nav class="menu">
-                <div class="logo">logo</div>
-                <div class="nav">
-                    <a href="">home</a>
-                    <a href="">sobre nos</a>
-                    <a href="">contacto</a>
-                    <a href="">ofertas</a>
+                <div class="logo"><img src="img/logo.png" alt="logo" width="50%">
                 </div>
-                <div class="social">
-                    <a href="">fb</a>
-                    <a href="">ig</a>
-                    <a href="">was</a>
+                <div class="nav">
+                    <a href="index.html">home</a>
+                    <a href="sobrenos.html">sobre nosotros</a>
+                    <a href="formulario.html">contacto</a>
+                    <a href="novedades.html">novedades</a>
+                </div>
+                <div class="carrito">
+                    <a href="carrito.html">carrito</a>
                 </div>
             </nav>
         </header>
-        <section class="section">
-            <div class="texto-principal">
-                <h1>Productos</h1>
-            </div>
-            <div class="productos">
-                <article class="producto">
-                    <h3>Samsung</h3>
-                </article>
-                <article class="producto">
-                    <h3>Motorola</h3>
-                </article>
-                <article class="producto">
-                    <h3>LG</h3>
-                </article>
-            </div>
-        </section>
+
+        <main class="main">
+
+            <!-- ACA IRIA EL CARRUSEL PERO SIN BOOTSTRAP, USAR COMANDOS EN CSS
+
+            <section class="carousel">
+                <a href="#"><i class="fa-solid fa-caret-left"></i></a>
+                <div class="carousel-frame">
+                    <ul>
+                        <li><img src="img/smartwatch_1.webp" alt=""></li>
+                        <li><img src="img/smartwatch_2.webp" alt=""></li>
+                        <li><img src="img/smartwatch_3.webp" alt=""></li>
+                        <li><img src="img/smartwatch_4.webp" alt=""></li>
+                        <li><img src="img/smartwatch_5.webp" alt=""></li>
+                    </ul>
+                </div>
+                <a href="#"><i class="fa-solid fa-caret-right"></i></a>
+            </section> -->
+
+            <section class="section">
+                <div class="texto-principal">
+                    <h1>Productos</h1>
+                </div>
+                <div class="productos">
+                    <article class="producto">
+                        <a href="samsung.html"><img src="img/samsung.png" alt="logosam"></a>
+                        
+                    </article>
+                    <article class="producto">
+                        <a href="motorola.html"><img src="img/motorola.png" alt="logomoto"></a>
+                        
+                    </article>
+                    <article class="producto">
+                        <a href="lg.html"><img src="img/lg.png" alt="logolg"></a>
+                        
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
         <footer class="footer">
             <div class="pie">
-                <h5>copyright</h5>
+                <h5>Seguinos en:</h5>
+                <a href="https://www.facebook.com/">Facebook</a>
+                <a href="https://www.instagram.com/">Instagram</a>
+                <a href="https://www.whatsapp.com/">Whatsapp</a>
             </div>
         </footer>
+
     </div>
 
     
