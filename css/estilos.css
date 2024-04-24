@@ -15,62 +15,82 @@
     background-color: #7F9F80;
     
 }
-    .menu{
-        background-color: #FFC374;
-        display: grid;
-        grid-template-columns: 1fr 5fr 2fr;
+.menu{
+    background-color: #FFC374;
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
 
-    }
-        .logo{
-            background-color: #F9E897;
-            text-align: center;
-            
-        }
-        .nav{
-            background-color: #F9E897;
-            text-align: center;
-                
-        }
-        .carrito{
-            background-color: #F9E897;
-            text-align: center;
-        }
+}
+.logo{
+    background-color: #F9E897;
+    text-align: center;
+    
+}
+.nav{
+    background-color: #F9E897;
+    text-align: center;
+        
+}
+.carrito{
+    background-color: #F9E897;
+    text-align: center;
+}
 
 .section {
     background-color: #7F9F80;
     
         
 }
-    .productos{
-        background-color: #FFC374;
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-    }
-    .producto{
-        background-color: #F9E897;
-        display: grid;
-        align-items: center;
-        text-align: center
+.productos{
+    background-color: #FFC374;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.producto{
+    background-color: #F9E897;
+    display: grid;
+    align-items: center;
+    text-align: center
+
     
-        
 
-    }
+}
 
-    .texto-principal{
-        text-align: center;
+.texto-principal{
+    text-align: center;
 
-    }
+}
 
-    .texto-secundario{
-        text-align: center;
-        
-    }
+.texto-secundario{
+    text-align: center;
+    
+}
 
 .footer {
     background-color: #7F9F80;
     text-align: center;
 
 }
-    .pie{
-        background-color: #FFC374;
-    }
+.pie{
+    background-color: #FFC374;
+}
+
+/* clase agregada por Fabiana para el formulario - falta terminar, está incompleto*/
+
+#formulario{
+    margin: 10%;
+    width: 80%;
+    background-color: rgb(74, 140, 165);
+    border: #124076 15px ;
+    padding: 5%;
+    border-radius: 15px ;
+    box-shadow: #F9E897 20px 20px 20px;
+    display: grid;
+}
+label, 
+input,
+select,
+textarea{
+    width: 95%;
+}
+
