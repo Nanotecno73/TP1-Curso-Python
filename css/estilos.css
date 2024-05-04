@@ -85,8 +85,8 @@
     padding: 5%;
     border-radius: 15px ;
     box-shadow: #F9E897 20px 20px 20px;
-    display: grid;
-}
+    }
+    
 label, 
 input,
 select,
