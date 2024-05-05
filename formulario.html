@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WFM Celulares</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="/js/validacion1.js"></script>
 </head>
 
 <body>
@@ -31,52 +32,74 @@
         <form action="/js/validacion1.js" id="formulario" method="post">
 
             <h1>Formulario de contacto</h1>
+            <div class="divFormulario">
+                <label for="nombre" class="labelFormulario"> Nombre *</label>
+                <input type="text" id="nombre" class="inputFormulario">
+            </div>
 
-            <label for="nombre"> Nombre *</label>
-            <input type="text" id="nombre">
+            <div class="divFormulario">
+                <label for="apellido" class="labelFormulario"> Apellido *</label>
+                <input type="text" id="apellido" class="inputFormulario">
+            </div>
 
-            <label for="apellido"> Apellido *</label>
-            <input type="text" id="apellido">
+            <div class="divFormulario">
+                <label for="fechaNacimiento" class="labelFormulario"> Fecha de nacimiento *</label>
+                <input type="date" id="fechaNacimiento" class="inputFormulario">
+            </div>
 
-            <label for="fechaNacimiento"> Fecha de nacimiento *</label>
-            <input type="date" id="fechaNacimiento">
+            <div class="divFormulario">
+                <label for="edad" class="labelFormulario"> Edad *</label>
+                <input type="number" id="edad" class="inputFormulario">
+            </div>
 
-            <label for="edad"> Edad *</label>
-            <input type="number" id="edad">
-            <div>
+            <div class="divFormulario">
                 <fieldset>
-                    <legend>Sexo  *</legend>
-                    <!-- <label for="sexo"> Seleccione una opción </label> -->
-                    <div>
-                        <input type="radio" name="sexo" id="sexo" value="femenino">femenino
-                    </div>
-                    <div>
-                        <input type="radio" name="sexo" id="sexo" value="masculino">masculino
-                    </div>
+                    <legend><label for="comentario" class="labelFormulario">Sexo *</label></legend>
+                    <label for="sexo"> Seleccione una opción </label>
+                    <br>
+                    <label>femenino</label>
+                    <input type="radio" name="sexo" id="sexo" value="femenino">
+                    <label>masculino</label>
+                    <input type="radio" name="sexo" id="sexo" value="masculino">
                 </fieldset>
             </div>
 
-            <label for="tipoDocumento"> Seleccione el tipo de documento *</label>
-            <select name="tipoDocumento" id="tipoDocumento">
-                <option value="dni">dni </option>
-                <option value="pasaporte">pasaporte</option>
-                <option value="otro">otro</option>
-            </select>
 
-            <label for="numeroDocumento"> Ingrese el número de documento *</label>
-            <input type="text" id="numeroDocumento">
+            <div class="divFormulario">
+                <label for="tipoDocumento" class="labelFormulario"> Seleccione el tipo de documento *</label>
+                <select name="tipoDocumento" id="tipoDocumento" class="inputFormulario">
+                    <option value="dni">dni </option>
+                    <option value="pasaporte">pasaporte</option>
+                    <option value="otro">otro</option>
+                </select>
+            </div>
 
-            <label for="email"> Correo *</label>
-            <input type="email" id="email">
+            <div class="divFormulario">
+                <label for="numeroDocumento" class="labelFormulario"> Ingrese el número de documento *</label>
+                <input type="text" id="numeroDocumento" class="inputFormulario">
+            </div>
 
-            <label for="comentario"> Comentario *</label>
-            <textarea name="comentario" rows="10" cols="60">Escriba su comentario </textarea>
+            <div class="divFormulario">
+                <label for="email" class="labelFormulario"> Correo *</label>
+                <input type="email" id="email" class="inputFormulario">
+            </div>
 
-            <p class="pFormulario"> * los datos son obligatorios</p>
+            <div class="divFormulario">
+                <fieldset>
+                    <legend><label for="comentario" class="labelFormulario"> Comentario *</label></legend>
+                    <!-- </div> -->
+                    <!-- <div> -->
+                    <textarea id="comentario" rows="10" cols="60">Escriba su comentario </textarea>
+                </fieldset>
+            </div>
 
-            <div>
-                <button class=" " type="button" onclick="">Enviar</button>
-                <button class=" " type="button" onclick="">Limpiar</button>
+            <div class="divFormulario">
+                <p class="pFormulario"> * los datos son obligatorios</p>
+            </div>
+
+            <div class="divFormulario">
+                <button class=" " type="button" onclick="verificarDatos()">Enviar</button>
+                <button class=" " type="button" onclick="borrarFormulario()">Limpiar</button>
             </div>
 
         </form>

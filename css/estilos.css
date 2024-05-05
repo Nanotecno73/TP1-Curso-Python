@@ -8,75 +8,71 @@
     background-color: #124076;
     display:flex;
     flex-flow: column;
-
 }
 
 .header{
-    background-color: #7F9F80;
-    
+    background-color: #7F9F80;    
 }
+
 .menu{
     background-color: #FFC374;
     display: grid;
     grid-template-columns: 1fr 5fr 2fr;
-
 }
+
 .logo{
     background-color: #F9E897;
-    text-align: center;
-    
+    text-align: center;  
 }
+
 .nav{
     background-color: #F9E897;
-    text-align: center;
-        
+    text-align: center;      
 }
+
 .carrito{
     background-color: #F9E897;
     text-align: center;
 }
 
 .section {
-    background-color: #7F9F80;
-    
-        
+    background-color: #7F9F80;      
 }
+
 .productos{
     background-color: #FFC374;
     display: grid;
     grid-template-columns: 33% 33% 33%;
 }
+
 .producto{
     background-color: #F9E897;
     display: grid;
     align-items: center;
-    text-align: center
-
-    
-
+    text-align: center 
 }
 
 .texto-principal{
     text-align: center;
-
 }
 
 .texto-secundario{
     text-align: center;
-    
 }
 
 .footer {
     background-color: #7F9F80;
     text-align: center;
-
 }
+
 .pie{
     background-color: #FFC374;
 }
 
 /* clase agregada por Fabiana para el formulario - falta terminar, está incompleto*/
-
+.contenedorFormulario{
+    
+}
 #formulario{
     margin: 10%;
     width: 80%;
@@ -86,11 +82,33 @@
     border-radius: 15px ;
     box-shadow: #F9E897 20px 20px 20px;
     }
+.divFormulario{
+    width: 90%;
     
-label, 
+}
+.labelFormulario{
+    text-align: left;
+    border-style: solid ;
+    border-radius: 5%;
+    border-width: 2px;
+    border-color: #041529;
+    width: 200px;
+    /* background-color: #a8a1cc; */
+}
+
+.inputFormulario{
+    width: 60%;
+}
+
+/* label, 
 input,
 select,
-textarea{
+textarea,
+div{
     width: 95%;
+} */
+
+.pFormulario{
+    color: #a41c1c;
 }
 
