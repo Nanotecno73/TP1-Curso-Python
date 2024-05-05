@@ -1,6 +1,5 @@
 //falta realizar todo el programa de validación en javascript
 function verificarDatos() {
-    //alert("datos RECIBIDOS")
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("apellido").value;
     let fechaNacimiento = document.getElementById("fechaNacimiento").value;
@@ -30,4 +29,13 @@ function verificarDatos() {
 function borrarFormulario() {
     // document.write("datos DATOS BORRADOS")
     alert("Datos borrados")
+    document.getElementById("nombre").value = "";
+    document.getElementById("apellido").value = "";
+    document.getElementById("fechaNacimiento").value = "";
+    document.getElementById("edad").value = "";
+    document.getElementById("sexo").value = "";
+    document.getElementById("tipoDocumento").value = "";
+    document.getElementById("numeroDocumento").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("comentario").value = "";
 }
