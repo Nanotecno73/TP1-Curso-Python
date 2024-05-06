@@ -70,21 +70,18 @@
 }
 
 /* clase agregada por Fabiana para el formulario - falta terminar, está incompleto*/
-.contenedorFormulario{
-    
-}
-#formulario{
-    margin: 10%;
+
+#formulario, .divConfirmacion{
+    margin: 1% 10% 3%;
     width: 80%;
     background-color: rgb(74, 140, 165);
     border: #124076 15px ;
-    padding: 5%;
+    padding: 1% 5% 1%;
     border-radius: 15px ;
     box-shadow: #F9E897 20px 20px 20px;
     }
 .divFormulario{
     width: 90%;
-    
 }
 .labelFormulario{
     text-align: left;
