@@ -1,0 +1,249 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.padre{
+    /* background-color: #124076; */
+    display:flex;
+    flex-flow: column;
+    /* position: relative; */
+}
+
+.header{
+    /* background-color: #7F9F80; */
+    
+}
+
+.menu{
+    /* background-color: #FFC374; */
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+
+}
+.logo{
+    /* width: 100%; */
+    /* background-color: #F9E897; */
+    max-height: 70px;
+}
+
+.logo img{
+    /* width: 50%; */
+    margin: -2.3em 0 0 2em;
+    max-height: 9em;
+    position: relative;
+}
+
+.panel-sup{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    max-height: 70px;
+    /* display: flex; */
+    /* flex-flow: row; */
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.barrabusqueda{
+    /* border: 1px solid black; */
+    width: 100%;
+    position: relative;
+}
+
+.barrabusqueda input{
+    align-items: center;
+    padding-left: 25px;
+    height: 2em;
+    background-color: rgba(195, 87, 15, 0.5);
+    border-radius: 5px;
+}
+
+.barrabusqueda img{
+    position: absolute;
+    top: 25%;
+    left: 0.5em;
+    cursor:text;
+}
+
+.navegador{
+    display: flex;
+    background-color: black;
+    padding: 10px;
+    justify-content: center;    
+}
+
+.navegador li{
+    list-style-type: none;
+    margin: 0 2em;
+    font-size: 0.9em;
+}
+
+.navegador a{
+    /* background-color: #F9E897; */
+    /* text-align: center; */
+    /* position: inline-blok; */
+    /* margin: 0 15px; */
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0 0.2em;
+}
+
+div a{
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navegador a:hover{
+    color: #c3570f;
+    background-color: #d1cdcb;
+    padding: 0.2em 0.2em;
+    border-radius: 5px;
+}
+
+.carrito{
+    /* background-color: #F9E897; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 15px; */
+}
+
+.section {
+    /* background-color: #7F9F80; */
+    
+        
+}
+.productos{
+    background-color: #FFC374;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.producto{
+    background-color: #F9E897;
+    display: grid;
+    align-items: center;
+    text-align: center
+
+    
+
+}
+
+.texto-principal{
+    text-align: center;
+
+}
+
+.texto-secundario{
+    text-align: center;
+    
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 350px;
+    background-color: rgb(214, 240, 98);
+    /* border-radius: 5px; */
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px #d0cece, 0 15px 50px;
+    position: relative;
+}
+
+.carousel{
+    display: flex;
+    width: 400%;
+    height: 400px;
+    /* background-color: burlywood; */
+    margin-left: -100%;
+}
+
+.items{
+    width: 100%;
+    /* text-align: center; */
+    /* background-color: yellowgreen; */
+}
+
+.carousel img{
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    margin: auto;
+    /* padding: auto; */
+    /* object-fit: cover; */
+}
+
+.botones{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 2.5em;
+    /* font-weight: bold; */
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.izquierdo{
+    left:10px;
+}
+
+.derecho{
+    right: 10px;
+}
+
+.botones:hover{
+    background-color: #ebe3e3;
+}
+
+.footer {
+    /* background-color: #7F9F80; */
+    text-align: center;
+    /* background-color: rgb(244, 135, 63) */
+    background-color: rgba(252, 88, 33, 1);
+    /* position: sticky; */
+    padding: 10px;
+}
+
+.footer h5{
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.pie img:hover{
+    width: 1.5em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+}
+
+.imagen{
+    margin-top: 5px;
+}
+
+/* clase agregada por Fabiana para el formulario - falta terminar, está incompleto*/
+
+#formulario{
+    margin: 10%;
+    width: 80%;
+    background-color: rgb(74, 140, 165);
+    border: #124076 15px ;
+    padding: 5%;
+    border-radius: 15px ;
+    box-shadow: #F9E897 20px 20px 20px;
+    display: grid;
+}
+label, 
+input,
+select,
+textarea{
+    width: 95%;
+}
+
