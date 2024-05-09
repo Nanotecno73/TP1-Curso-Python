@@ -4,122 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WFM Celulares</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <script src="/js/validacion1.js"></script>
+    <title>Power Phone Celulares</title>
+    <link rel="shortcut icon" href="img/Power-Phone.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="css/principal.css">
+    <script src="js/validacion1.js"></script>
 </head>
 
 <body>
-
     <div class="padre">
+
         <header class="header">
-            <nav class="menu">
-                <div class="logo"><img src="img/logo.png" alt="logo" width="50%">
+            <div class="panel-sup">
+                <div class="logo"><img src="img/Power-Phone-bkg.png" alt="logo">
                 </div>
-                <div class="nav">
-                    <a href="index.html">home</a>
-                    <a href="sobrenos.html">sobre nosotros</a>
-                    <a href="formulario.html">contacto</a>
-                    <a href="novedades.html">novedades</a>
+                <div class="barrabusqueda">
+                    <img src="img/lupa-de-busqueda.png" width="15px" onclick="enfocarBusqueda()"></img>
+                    <input type="text" id="searchInput" placeholder="Buscar un producto...">
                 </div>
+
                 <div class="carrito">
-                    <a href="carrito.html">carrito</a>
+                    <a href="#" class="usuario"><img src="img/usuario.png" width="20px"></a>
+                    <a href="carrito.html"><img src="img/carrito-de-compras.png" width="20px"></a>
+                    <h6 id="cantProducto">0</h6>
                 </div>
-            </nav>
+            </div>
+
+            <ul class="navegador">
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="novedades.html">Novedades de Productos</a></li>
+                <li><a href="#">Promociones Vigentes</a></li>
+                <li><a href="formulario.html">Contactanos</a></li>
+                <li><a href="sobrenos.html">Sobre nosotros</a></li>
+                <li><a href="#">Accesorios</a></li>
+            </ul>
+
         </header>
-
-        <!-- falta campos y formatos al formulario, está incompleto -->
+        <!-- formulario -->
+        <h1 class="texto-principal">Formulario de contacto</h1>
         <form action="/js/validacion1.js" id="formulario" method="post">
+            <div class="contenedorFormulario">
+                <div class="divItem">
+                    <label for="nombre" class="labelFormulario"> Nombre *</label>
+                    <input type="text" id="nombre" class="inputFormulario">
+                </div>
 
-            <h1>Formulario de contacto</h1>
-            <div class="divFormulario">
-                <label for="nombre" class="labelFormulario"> Nombre *</label>
-                <input type="text" id="nombre" class="inputFormulario">
-            </div>
+                <div class="divItem">
+                    <label for="apellido" class="labelFormulario"> Apellido *</label>
+                    <input type="text" id="apellido" class="inputFormulario">
+                </div>
 
-            <div class="divFormulario">
-                <label for="apellido" class="labelFormulario"> Apellido *</label>
-                <input type="text" id="apellido" class="inputFormulario">
-            </div>
+                <div class="divItem">
+                    <label for="fechaNacimiento" class="labelFormulario"> Fecha de nacimiento *</label>
+                    <input type="date" id="fechaNacimiento" class="inputFormulario">
+                </div>
 
-            <div class="divFormulario">
-                <label for="fechaNacimiento" class="labelFormulario"> Fecha de nacimiento *</label>
-                <input type="date" id="fechaNacimiento" class="inputFormulario">
-            </div>
+                <div class="divItem">
+                    <label for="edad" class="labelFormulario"> Edad *</label>
+                    <input type="number" id="edad" class="inputFormulario">
+                </div>
 
-            <div class="divFormulario">
-                <label for="edad" class="labelFormulario"> Edad *</label>
-                <input type="number" id="edad" class="inputFormulario">
-            </div>
-
-            <div class="divFormulario">
                 <fieldset>
-                    <legend><label for="comentario" class="labelFormulario">Sexo *</label></legend>
-                    <label for="sexo"> Seleccione una opción </label>
+                    <legend><label for="comentario">Sexo *</label></legend>
+                    <label for="sexo" class="margen"> Seleccione una opción </label>
                     <br>
-                    <label>femenino</label>
+                    <label class="margen">femenino</label>
                     <input type="radio" name="sexo" id="sexo" value="femenino">
                     <label>masculino</label>
                     <input type="radio" name="sexo" id="sexo" value="masculino">
                 </fieldset>
-            </div>
 
+                <div class="divItem">
+                    <label for="tipoDocumento" class="labelFormulario"> Seleccione el tipo de documento *</label>
+                    <select name="tipoDocumento" id="tipoDocumento" class="inputFormulario">
+                        <option value="dni">dni </option>
+                        <option value="pasaporte">pasaporte</option>
+                        <option value="otro">otro</option>
+                    </select>
+                </div>
 
-            <div class="divFormulario">
-                <label for="tipoDocumento" class="labelFormulario"> Seleccione el tipo de documento *</label>
-                <select name="tipoDocumento" id="tipoDocumento" class="inputFormulario">
-                    <option value="dni">dni </option>
-                    <option value="pasaporte">pasaporte</option>
-                    <option value="otro">otro</option>
-                </select>
-            </div>
+                <div class="divItem">
+                    <label for="numeroDocumento" class="labelFormulario"> Ingrese el número de documento *</label>
+                    <input type="text" id="numeroDocumento" class="inputFormulario">
+                </div>
 
-            <div class="divFormulario">
-                <label for="numeroDocumento" class="labelFormulario"> Ingrese el número de documento *</label>
-                <input type="text" id="numeroDocumento" class="inputFormulario">
-            </div>
+                <div class="divItem">
+                    <label for="email" class="labelFormulario"> Correo *</label>
+                    <input type="email" id="email" class="inputFormulario">
+                </div>
 
-            <div class="divFormulario">
-                <label for="email" class="labelFormulario"> Correo *</label>
-                <input type="email" id="email" class="inputFormulario">
-            </div>
+                <div class="divItem2">
+                    <fieldset>
+                        <legend><label for="comentario" class="labelFormulario"> Comentario *</label></legend>
+                        <textarea id="comentario" rows="10" class="textarea">Escriba su comentario </textarea>
+                    </fieldset>
+                </div>
 
-            <div class="divFormulario">
-                <fieldset>
-                    <legend><label for="comentario" class="labelFormulario"> Comentario *</label></legend>
-                    <!-- </div> -->
-                    <!-- <div> -->
-                    <textarea id="comentario" rows="10" cols="60">Escriba su comentario </textarea>
-                </fieldset>
-            </div>
-
-            <div class="divFormulario">
                 <p class="pFormulario"> * los datos son obligatorios</p>
-            </div>
 
-            <div class="divFormulario">
-                <button class=" " type="button" onclick="verificarDatos()">Enviar</button>
-                <button class=" " type="button" onclick="borrarFormulario()">Limpiar</button>
+                <div class="divBotones">
+                    <button class=" " type="button" onclick="verificarDatos()">Enviar</button>
+                    <button class=" " type="button" onclick="borrarFormulario()">Limpiar</button>
+                </div>
             </div>
-
         </form>
-        <!-- ********************************************************************** -->
-        <div class="divConfirmacion" id="divConfirmacion">
-            <h1 class="texto-principal">Datos enviados correctamente</h1>
-        </div>
 
-        <!-- ********************************************************************** -->
-        
         <footer class="footer">
             <div class="pie">
-                <h5>Seguinos en:</h5>
-                <a href="https://www.facebook.com/">Facebook</a>
-                <a href="https://www.instagram.com/">Instagram</a>
-                <a href="https://www.whatsapp.com/">Whatsapp</a>
+                <h5>Nuestras Redes:</h5>
+                <a href="https://www.facebook.com/"><img src="img/facebook.png" alt="" class="imagen" width="25px"></a>
+                <a href="https://www.instagram.com/"><img src="img/instagram.png" alt="" class="imagen"
+                        width="25px"></a>
+                <a href="https://www.whatsapp.com/"><img src="img/whatsapp.png" alt="" class="imagen" width="25px"></a>
             </div>
         </footer>
     </div>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>

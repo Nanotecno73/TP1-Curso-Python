@@ -229,21 +229,54 @@ div a{
 }
 
 /* clase agregada por Fabiana para el formulario - falta terminar, está incompleto*/
-
-#formulario{
-    margin: 10%;
-    width: 80%;
-    background-color: rgb(74, 140, 165);
-    border: #124076 15px ;
-    padding: 5%;
-    border-radius: 15px ;
-    box-shadow: #F9E897 20px 20px 20px;
+/* ***********************formulario***************************************** */
+.contenedorFormulario {
+    /* width: 100%; */
+    /* padding: 0% 10% 0% 20%; */
+    grid-gap: 1px;
+    /* justify-items: center; */
+    align-items: center;
     display: grid;
+    grid-template-columns: 100%;
+    /* ******************************* */
+    margin: 1% 10% 3%;
+    width: 80%;
+    background-color: rgb(228, 162, 116);
+    /* border: #124076 15px ; */
+    padding: 2% 5% 1%;
+    border-radius: 15px ;
+    box-shadow: #3d3303 10px 10px 20px;
+
 }
-label, 
-input,
-select,
-textarea{
-    width: 95%;
+.divItem{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 2%;
+}
+.divItem2{
+    display: grid;
+    grid-template-columns: 100%;
+    margin-top: 2%;
 }
 
+.divBotones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 20px;
+    margin: 2%;
+    /* align-items: center; */
+    padding: 5px;
+}
+.textarea{
+    width: 80%;
+    margin-left: 10%;
+}
+.pFormulario{
+    font-style: italic;
+    color: crimson;
+}
+.margen{
+    margin-left: 5%;
+
+}
