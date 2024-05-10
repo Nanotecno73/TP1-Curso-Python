@@ -39,28 +39,31 @@
             </ul>
 
         </header>
+        
         <!-- formulario -->
         <h1 class="texto-principal">Formulario de contacto</h1>
         <form action="/js/validacion1.js" id="formulario" method="post">
+
             <div class="contenedorFormulario">
                 <div class="divItem">
-                    <label for="nombre" class="labelFormulario"> Nombre *</label>
-                    <input type="text" id="nombre" class="inputFormulario">
+                    <label for="nombre" class="labelFormulario" id="etiquetaNombre"> Nombre *</label>
+                    <input type="text" id="nombre" class="inputFormulario" onblur="validarNombre()">
                 </div>
 
                 <div class="divItem">
-                    <label for="apellido" class="labelFormulario"> Apellido *</label>
-                    <input type="text" id="apellido" class="inputFormulario">
+                    <label for="apellido" class="labelFormulario" id="etiquetaApellido"> Apellido *</label>
+                    <input type="text" id="apellido" class="inputFormulario" onblur="validarApellido()"">
+                </div>
+
+                <div class = " divItem">
+                    <label for="fechaNacimiento" class="labelFormulario" id="etiquetaFechaNacimiento"> Fecha de
+                        nacimiento *</label>
+                    <input type="date" id="fechaNacimiento" class="inputFormulario" onblur="validarFechaNacimiento()">
                 </div>
 
                 <div class="divItem">
-                    <label for="fechaNacimiento" class="labelFormulario"> Fecha de nacimiento *</label>
-                    <input type="date" id="fechaNacimiento" class="inputFormulario">
-                </div>
-
-                <div class="divItem">
-                    <label for="edad" class="labelFormulario"> Edad *</label>
-                    <input type="number" id="edad" class="inputFormulario">
+                    <label for="edad" class="labelFormulario" id="etiquetaEdad"> Edad *</label>
+                    <input type="number" id="edad" class="inputFormulario" onblur="validarEdad()">
                 </div>
 
                 <fieldset>
@@ -76,26 +79,29 @@
                 <div class="divItem">
                     <label for="tipoDocumento" class="labelFormulario"> Seleccione el tipo de documento *</label>
                     <select name="tipoDocumento" id="tipoDocumento" class="inputFormulario">
-                        <option value="dni">dni </option>
-                        <option value="pasaporte">pasaporte</option>
-                        <option value="otro">otro</option>
+                        <option value="dni">DNI </option>
+                        <option value="le">LE</option>
+                        <option value="lc">LC</option>
                     </select>
                 </div>
 
                 <div class="divItem">
-                    <label for="numeroDocumento" class="labelFormulario"> Ingrese el número de documento *</label>
-                    <input type="text" id="numeroDocumento" class="inputFormulario">
+                    <label for="numeroDocumento" class="labelFormulario" id="etiquetaNumeroDocumento"> Ingrese el número
+                        de documento *</label>
+                    <input type="text" id="numeroDocumento" class="inputFormulario" onblur="validarNumeroDocumento()">
                 </div>
 
                 <div class="divItem">
-                    <label for="email" class="labelFormulario"> Correo *</label>
-                    <input type="email" id="email" class="inputFormulario">
+                    <label for="email" class="labelFormulario" id="etiquetaEmail"> Correo *</label>
+                    <input type="email" id="email" class="inputFormulario" onblur="validarEmail()">
                 </div>
 
                 <div class="divItem2">
                     <fieldset>
-                        <legend><label for="comentario" class="labelFormulario"> Comentario *</label></legend>
-                        <textarea id="comentario" rows="10" class="textarea">Escriba su comentario </textarea>
+                        <legend><label for="comentario" class="labelFormulario" id="etiquetaComentario"> Comentario
+                                *</label></legend>
+                        <textarea id="comentario" rows="10" class="textarea"
+                            onblur="validarComentario()">Escriba su comentario </textarea>
                     </fieldset>
                 </div>
 
@@ -107,6 +113,13 @@
                 </div>
             </div>
         </form>
+
+        <!-- ********************************************************************** -->
+        <div class="contenedorFormulario" id="divConfirmacion">
+            <h1 class="texto-principal">Datos enviados correctamente</h1>
+        </div>
+        <!-- ********************************************************************** -->
+
 
         <footer class="footer">
             <div class="pie">
