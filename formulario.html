@@ -39,7 +39,7 @@
             </ul>
 
         </header>
-
+        
         <!-- formulario -->
         <h1 class="texto-principal">Formulario de contacto</h1>
         <form action="/js/validacion1.js" id="formulario" method="post">
@@ -108,7 +108,11 @@
                     <label for="archivo" class="labelFormulario" id="archivo"> Agregue un archivo si lo desea</label>
                     <input type="file" name="archivo" id="archivo">
 
-                <p class="pFormulario"> * los datos son obligatorios</p>
+                </div>
+                <div class="divItem">
+                    <p class="pFormulario"> * los datos son obligatorios</p>
+                </div>
+                
 
                 <div class="divBotones">
                     <button class=" " type="button" onclick="verificarDatos()">Enviar</button>
@@ -120,21 +124,7 @@
         <!-- ********************************************************************** -->
         <div class="contenedorFormulario" id="divConfirmacion">
             <h1 class="texto-principal">Datos enviados correctamente</h1>
-            <span id="mostrarNombre"></span>
-            <span id="mostrarApellido"></span>
-            <span id="mostrarFechaNacimiento"></span>
-            <span id="mostrarEdad"></span>
-            <span id="mostrarSexo"></span>
-            <span id="mostrarTipoDocumento"></span>
-            <span id="mostrarNumeroDocumento"></span>
-            <span id="mostrarEmail"></span>
-            <span id="mostrarComentario"></span>
-            <span id="mostrarArchivo"></span>
-            <div class="divBotones">
-                <button class=" " type="button" onclick="irAlIndex()">Volver a Pagina Principal</button>
-            </div>
         </div>
-
         <!-- ********************************************************************** -->
 
 
