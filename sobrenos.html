@@ -3,44 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WFM Celulares</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>Power Phone Celulares</title>
+    <link rel="shortcut icon" href="img/Power-Phone.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="css/principal.css">
 </head>
 <body>
+    <!-- Creamos contenedor padre -->
     <div class="padre">
+        
+        <!-- Creamos barra de navegación -->
+        
         <header class="header">
-            <nav class="menu">
-                <div class="logo"><img src="img/logo.png" alt="logo" width="50%">
+            <!-- Barra de navegación superior -->
+            <div class="panel-sup">
+                <div class="logo"><img src="img/Power-Phone-bkg.png" alt="logo">
                 </div>
-                <div class="nav">
-                    <a href="index.html">home</a>
-                    <a href="sobrenos.html">sobre nosotros</a>
-                    <a href="formulario.html">contacto</a>
-                    <a href="novedades.html">novedades</a>
+                <div class="barrabusqueda">
+                    <img src="img/lupa-de-busqueda.png" width="15px" onclick="enfocarBusqueda()"></img>
+                    <input type="text" id="searchInput" placeholder="Buscar un producto...">
                 </div>
+             
                 <div class="carrito">
-                    <a href="carrito.html">carrito</a>
+                    <a href="#" class="usuario"><img src="img/usuario.png" width="20px"></a>
+                    <a href="carrito.html"><img src="img/carrito-de-compras.png" width="20px"></a>
+                    <h6 id="cantProducto">0</h6>
                 </div>
-            </nav>
+            </div>
+            
+            <!-- Barra de navegación inferior -->
+            <ul class="navegador">
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="novedades.html">Novedades de Productos</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="formulario.html">Contactanos</a></li>
+                <li><a href="sobrenos.html">Sobre nosotros</a></li>
+                <li><a href="#">Accesorios</a></li>
+            </ul>
         </header>
+
+        <!-- Creamos section sobre nosotros -->
         <section class="section">
             <div class="texto-principal">
                 <h1>Sobre Nosotros</h1>
             </div>
             <div class="texto-secundario">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A illo, reiciendis quidem officia perspiciatis quo ipsam commodi recusandae architecto, saepe nihil hic ullam iusto explicabo magnam nobis quia accusamus! Cumque veniam sint cupiditate mollitia est unde doloremque possimus suscipit maiores nulla fugit ipsam vitae ut recusandae at sit tempora quia natus, nisi adipisci? Id obcaecati alias nihil reiciendis esse molestias expedita quos neque debitis natus voluptas impedit magni dolore, enim, aspernatur est cumque ex asperiores animi saepe tempore temporibus. Architecto quod earum sapiente ullam facere illo nostrum reprehenderit, tenetur exercitationem, repellendus ab rem ex, placeat atque? Nemo qui nobis ipsum.</p>
-                <hr>
+                <br>
+                <p>Power Phone Celulares: Somos una empresa dedicada a la importación y comercialización de celulares de las mas presitgiosas marcas mundiales, ofreciendo a nuestros clientes una amplia variedad de modelos con la calidad que merecen. </p>
+                <br>
+                <p>Para ello contamos con un varido<a href="productos.html">catálogo</a>de productos para que puedan ver y elegir su nuevo equipo. </p>
+                <br>
+                <p>Nos pueden encontrar en la siguiente dirección o en las redes señaladas al pie de la página. Gracias por visitarnos!</p>
+                <br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11671.49989971917!2d-58.54710781631957!3d-34.44912147776532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1713738287119!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <br>
             </div>
         </section>
+        
+        <!-- Creamos footer -->
+
         <footer class="footer">
             <div class="pie">
-                <h5>Seguinos en:</h5>
-                <a href="https://www.facebook.com/">Facebook</a>
-                <a href="https://www.instagram.com/">Instagram</a>
-                <a href="https://www.whatsapp.com/">Whatsapp</a>
+                <h5>Nuestras Redes:</h5>
+                <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png" alt="" class="imagen" width="25px"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="" class="imagen" width="25px"></a>
+                <a href="https://www.whatsapp.com/" target="_blank"><img src="img/whatsapp.png" alt="" class="imagen" width="25px"></a>
             </div>
         </footer>
+
     </div>
 
     

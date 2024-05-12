@@ -3,43 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WFM Celulares</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <title>Power Phone Celulares</title>
+    <link rel="shortcut icon" href="img/Power-Phone.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="css/principal.css">
 </head>
 <body>
     <div class="padre">
+
+        <!-- Creamos barra de navegación -->
+        
         <header class="header">
-            <nav class="menu">
-                <div class="logo"><img src="img/logo.png" alt="logo" width="50%">
+            <!-- Barra de navegación superior -->
+            <div class="panel-sup">
+                <div class="logo"><img src="img/Power-Phone-bkg.png" alt="logo">
                 </div>
-                <div class="nav">
-                    <a href="index.html">home</a>
-                    <a href="sobrenos.html">sobre nosotros</a>
-                    <a href="formulario.html">contacto</a>
-                    <a href="novedades.html">novedades</a>
+                <div class="barrabusqueda">
+                    <img src="img/lupa-de-busqueda.png" width="15px" onclick="enfocarBusqueda()"></img>
+                    <input type="text" id="searchInput" placeholder="Buscar un producto...">
                 </div>
+             
                 <div class="carrito">
-                    <a href="carrito.html">carrito</a>
+                    <a href="#" class="usuario"><img src="img/usuario.png" width="20px"></a>
+                    <a href="carrito.html"><img src="img/carrito-de-compras.png" width="20px"></a>
+                    <h6 id="cantProducto">0</h6>
                 </div>
-            </nav>
+            </div>
+            
+            <!-- Barra de navegación inferior -->
+            <ul class="navegador">
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="novedades.html">Novedades de Productos</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="formulario.html">Contactanos</a></li>
+                <li><a href="sobrenos.html">Sobre nosotros</a></li>
+                <li><a href="#">Accesorios</a></li>
+            </ul>
         </header>
+
+        <!-- Creamos section con link a novedades -->
         <section class="section">
             <div class="texto-principal">
                 <h1>Novedades</h1>
             </div>
             <div class="texto-secundario">
+                <br>
                 <iframe width="695" height="391" src="https://www.youtube.com/embed/Iibp2yWQwhs" title="SAMSUNG S24 SERÁ LA REVOLUCIÓN!!!!!!! ¿Qué te apuestas?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                
+                <br>
             </div>
         </section>
-        <footer class="footer">
+
+         <!-- Creamos footer -->
+
+         <footer class="footer">
             <div class="pie">
-                <h5>Seguinos en:</h5>
-                <a href="https://www.facebook.com/">Facebook</a>
-                <a href="https://www.instagram.com/">Instagram</a>
-                <a href="https://www.whatsapp.com/">Whatsapp</a>
+                <h5>Nuestras Redes:</h5>
+                <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png" alt="" class="imagen" width="25px"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="" class="imagen" width="25px"></a>
+                <a href="https://www.whatsapp.com/" target="_blank"><img src="img/whatsapp.png" alt="" class="imagen" width="25px"></a>
             </div>
-        </footer>
+
     </div>
 
     
