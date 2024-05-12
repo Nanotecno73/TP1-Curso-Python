@@ -128,6 +128,19 @@ function validarEdad(){
     }
 }
 
+function mostrarSexo() {
+    var opciones = document.getElementsByName("sexo");
+    var seleccionado = "";
+  for (var i = 0; i < opciones.length; i++) {
+      if (opciones[i].checked) {
+        seleccionado = opciones[i].value;
+        break;
+      }
+    }
+  //   alert("Selección: " + seleccionado);
+  return seleccionado;
+  }
+
 function validarNumeroDocumento (){
     let texto = document.getElementById("numeroDocumento").value;
     let etiqueta = document.getElementById("etiquetaNumeroDocumento");

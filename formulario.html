@@ -67,11 +67,11 @@
                 </div>
 
                 <fieldset>
-                    <legend><label for="comentario">Sexo *</label></legend>
+                    <legend><label for="sexo">Sexo *</label></legend>
                     <label for="sexo" class="margen"> Seleccione una opción </label>
                     <br>
                     <label class="margen">femenino</label>
-                    <input type="radio" name="sexo" id="sexo" value="femenino">
+                    <input type="radio" name="sexo" id="sexo" value="femenino" checked>
                     <label>masculino</label>
                     <input type="radio" name="sexo" id="sexo" value="masculino">
                 </fieldset>
@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="divItem">
-                    <label for="numeroDocumento" class="labelFormulario" id="etiquetaNumeroDocumento"> Ingrese el número
+                    <label for="numeroDocumento" class="labelFormulario" id="etiquetaNumeroDocumento"> Ingrese el N°
                         de documento *</label>
                     <input type="text" id="numeroDocumento" class="inputFormulario" onblur="validarNumeroDocumento()">
                 </div>
@@ -104,8 +104,15 @@
                             onblur="validarComentario()">Escriba su comentario </textarea>
                     </fieldset>
                 </div>
+                <div class="divItem">
+                    <label for="archivo" class="labelFormulario" id="archivo"> Agregue un archivo si lo desea</label>
+                    <input type="file" name="archivo" id="archivo">
 
-                <p class="pFormulario"> * los datos son obligatorios</p>
+                </div>
+                <div class="divItem">
+                    <p class="pFormulario"> * los datos son obligatorios</p>
+                </div>
+                
 
                 <div class="divBotones">
                     <button class=" " type="button" onclick="verificarDatos()">Enviar</button>
