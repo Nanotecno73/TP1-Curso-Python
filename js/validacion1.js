@@ -17,18 +17,21 @@ function verificarDatos() {
         document.getElementById("divConfirmacion").style.visibility = "hidden";//el mensajae de confirmación está oculto
         return;
     } else {
-        alert("Datos enviados");
-        document.getElementById("nombre").value = "";
-        document.getElementById("apellido").value = "";
-        document.getElementById("fechaNacimiento").value = "";
-        document.getElementById("edad").value = "";
-        document.getElementById("sexo").value = "";
-        document.getElementById("tipoDocumento").value = "";
-        document.getElementById("numeroDocumento").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("comentario").value = "";
+        // alert("Datos enviados");
+        //mostramos los datos recibidos por el formulario.
         document.getElementById("formulario").style.visibility = "hidden"; // escondemos el formulario
         document.getElementById("divConfirmacion").style.visibility = "visible";//mostramos el mensajae de confirmación
+        document.getElementById("mostrarNombre").textContent = "Nombre: "+document.getElementById("nombre").value.toUpperCase();
+        document.getElementById("mostrarApellido").textContent = "Apellido: " + document.getElementById("apellido").value.toUpperCase();
+        document.getElementById("mostrarFechaNacimiento").textContent = "Fehca de nacimiento: " + document.getElementById("fechaNacimiento").value;
+        document.getElementById("mostrarEdad").textContent = "Edad: " + document.getElementById("edad").value;
+        document.getElementById("mostrarSexo").textContent = "Sexo: " + mostrarSexo().toUpperCase();
+        document.getElementById("mostrarTipoDocumento").textContent = "Tipo de documento: " + document.getElementById("tipoDocumento").value.toUpperCase();
+        document.getElementById("mostrarNumeroDocumento").textContent = "Número de documento: " + document.getElementById("numeroDocumento").value;
+        document.getElementById("mostrarEmail").textContent = "Email: " + document.getElementById("email").value;
+        document.getElementById("mostrarComentario").textContent = "Comentario: " + document.getElementById("comentario").value.toUpperCase();
+        document.getElementById("mostrarArchivo").textContent = "Nombre Archivo Adjunto: "; 
+
     }
 }
 
@@ -128,6 +131,19 @@ function validarEdad(){
     }
 }
 
+function mostrarSexo() {
+    var opciones = document.getElementsByName("sexo");
+    var seleccionado = "";
+  for (var i = 0; i < opciones.length; i++) {
+      if (opciones[i].checked) {
+        seleccionado = opciones[i].value;
+        break;
+      }
+    }
+  //   alert("Selección: " + seleccionado);
+  return seleccionado;
+  }
+
 function validarNumeroDocumento (){
     let texto = document.getElementById("numeroDocumento").value;
     let etiqueta = document.getElementById("etiquetaNumeroDocumento");
@@ -176,3 +192,6 @@ function validarComentario (){
         etiqueta.style.color = "black";
     }
 }
+function irAlIndex() {
+    window.location.href = "principal.html";
+  }
