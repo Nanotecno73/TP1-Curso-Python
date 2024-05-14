@@ -193,5 +193,5 @@ function validarComentario (){
     }
 }
 function irAlIndex() {
-    window.location.href = "principal.html";
+    window.location.href = "index.html";
   }
