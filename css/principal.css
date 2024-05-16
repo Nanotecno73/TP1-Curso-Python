@@ -13,20 +13,18 @@
 }
 
 .header{
-    /* background-color: #7F9F80; */
-    
+    position: relative;
 }
 
 .menu{
     /* background-color: #FFC374; */
     display: grid;
     grid-template-columns: 1fr 5fr 2fr;
-
 }
+
 .logo{
-    /* width: 100%; */
-    /* background-color: #F9E897; */
     max-height: 70px;
+    position: relative;
 }
 
 .logo img{
@@ -34,6 +32,7 @@
     margin: -2.3em 0 0 2em;
     max-height: 9em;
     position: relative;
+    z-index: -1;    
 }
 
 .panel-sup{
@@ -45,6 +44,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    /* z-index: -1; */
 }
 
 .barrabusqueda{
@@ -54,6 +54,7 @@
 }
 
 .barrabusqueda input{
+    width: 100%;
     align-items: center;
     padding-left: 25px;
     height: 2em;
@@ -70,9 +71,11 @@
 
 .navegador{
     display: flex;
+    flex-flow: row wrap;
     background-color: black;
     padding: 10px;
-    justify-content: center;    
+    justify-content: space-around;
+    /* z-index: 2;     */
 }
 
 .navegador li{
@@ -91,11 +94,15 @@
     padding: 0 0.2em;
 }
 
-div a{
+.usuario{
+    margin-right: 1em;
+}
+
+/* div a{
     color: black;
     text-decoration: none;
     margin: 0 10px;
-}
+} */
 
 .navegador a:hover{
     color: #c3570f;
@@ -143,21 +150,23 @@ div a{
 }
 
 .contenedor{
-    width: 90%;
-    max-width: 350px;
+    width: 100%;
+    height: 75vh;
+    /* max-width: 350px; */
     background-color: rgb(214, 240, 98);
     /* border-radius: 5px; */
-    margin: 20px auto;
+    /* margin: 20px auto; */
     overflow: hidden;
-    box-shadow: 0 0 0 5px #d0cece, 0 15px 50px;
+    /* box-shadow: 0 0 0 5px #d0cece, 0 15px 50px; */
     position: relative;
 }
 
 .carousel{
     display: flex;
     width: 400%;
-    height: 400px;
+    /* height: 500px; */
     /* background-color: burlywood; */
+    margin-top: -120px;
     margin-left: -100%;
 }
 
@@ -170,7 +179,7 @@ div a{
 .carousel img{
     display: block;
     width: 100%;
-    max-width: 350px;
+    /* max-width: 350px; */
     height: 100%;
     margin: auto;
     /* padding: auto; */
@@ -182,7 +191,7 @@ div a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(242, 157, 73, 0.7);
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
@@ -201,7 +210,7 @@ div a{
 }
 
 .botones:hover{
-    background-color: #ebe3e3;
+    background-color: rgba(235, 227, 227, 0.7);
 }
 
 .footer {
@@ -210,7 +219,7 @@ div a{
     /* background-color: rgb(244, 135, 63) */
     background-color: rgba(252, 88, 33, 1);
     /* position: sticky; */
-    padding: 10px;
+    padding: 3px 10px;
 }
 
 .footer h5{
@@ -246,8 +255,8 @@ div a{
     padding: 2% 5% 1%;
     border-radius: 15px ;
     box-shadow: #3d3303 10px 10px 20px;
-
 }
+
 .divItem{
     display: grid;
     grid-template-columns: 30% 70%;

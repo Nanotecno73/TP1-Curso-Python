@@ -17,7 +17,7 @@ carousel.insertAdjacentElement('afterbegin', itemCarouselLast);
 function moverDerecha(){
     let itemCarouselFirst = document.querySelectorAll('.items')[0];
     carousel.style.marginleft = "-200%";
-    carousel.style.transition = "all 0.5s ease";
+    carousel.style.transition = "all 0.5s linear";
     carousel.insertAdjacentElement('beforeend', itemCarouselFirst);
     carousel.style.marginleft = "-100";
     // setTimeout (function(){
