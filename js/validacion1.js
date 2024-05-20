@@ -17,8 +17,7 @@ function verificarDatos() {
         document.getElementById("divConfirmacion").style.visibility = "hidden";//el mensajae de confirmación está oculto
         return;
     } else {
-        // alert("Datos enviados");
-        //mostramos los datos recibidos por el formulario.
+        //mostramos los datos recibidos por el formulario .
         document.getElementById("formulario").style.visibility = "hidden"; // escondemos el formulario
         document.getElementById("divConfirmacion").style.visibility = "visible";//mostramos el mensajae de confirmación
         document.getElementById("mostrarNombre").textContent = "Nombre: "+document.getElementById("nombre").value.toUpperCase();
@@ -30,24 +29,16 @@ function verificarDatos() {
         document.getElementById("mostrarNumeroDocumento").textContent = "Número de documento: " + document.getElementById("numeroDocumento").value;
         document.getElementById("mostrarEmail").textContent = "Email: " + document.getElementById("email").value;
         document.getElementById("mostrarComentario").textContent = "Comentario: " + document.getElementById("comentario").value.toUpperCase();
-        document.getElementById("mostrarArchivo").textContent = "Nombre Archivo Adjunto: "; 
-
+        document.getElementById("mostrarArchivo").textContent = "Nombre Archivo Adjunto: " + document.getElementById("archivo").value.toUpperCase(); 
     }
 }
 
 function borrarFormulario() {
-    //limpiamos todos lo elementos del formulario
+    //limpiamos todos lo elementos del formulario y restablecemos el formulario, incluyendo el campo de archivo
+    const form = document.getElementById('formulario');   
+    form.reset();
+
     alert("Datos borrados")
-    document.getElementById("nombre").value = "";
-    document.getElementById("apellido").value = "";
-    document.getElementById("fechaNacimiento").value = "";
-    document.getElementById("edad").value = "";
-    document.getElementById("sexo").value = "";
-    document.getElementById("tipoDocumento").value = "";
-    document.getElementById("numeroDocumento").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("comentario").value = "";
-    //ocultamos el mensaje de confirmación.
     document.getElementById("divConfirmacion").style.visibility = "hidden";
 }
 
@@ -88,6 +79,7 @@ function validarApellido (){
     }
 }
 
+// esta fúnción valida que la fecha de nacimiento no sea mayor a la fecha actual
 function validarFechaNacimiento (){
     let fecha = document.getElementById("fechaNacimiento").value;
     let fechaNacimiento = new Date(fecha);
@@ -97,7 +89,6 @@ function validarFechaNacimiento (){
 
     // Comparar la fecha de nacimiento con la fecha actual
     if (fechaNacimiento > fechaActual) {
-        //alert("");
         etiqueta.innerText = "La fecha de nacimiento no puede ser mayor que la fecha actual.";
         etiqueta.style.color = "red";
         document.getElementById("fechaNacimiento").value = "";
@@ -108,6 +99,7 @@ function validarFechaNacimiento (){
     }
 }
 
+//esta función valida que la edad ingresada sea correcta según su fecha de nacimiento
 function validarEdad(){
     let fechaNacimiento = document.getElementById("fechaNacimiento").value;
     let edad = parseInt(document.getElementById("edad").value);
@@ -123,7 +115,6 @@ function validarEdad(){
         //alert("La fecha de nacimiento y la edad coinciden.");
         etiqueta.innerText = "Edad";
         etiqueta.style.color = "black";
-
     } else {
         //alert("La fecha de nacimiento y la edad no coinciden.");
         etiqueta.innerText = "Edad Incorrecta.";
@@ -140,10 +131,10 @@ function mostrarSexo() {
         break;
       }
     }
-  //   alert("Selección: " + seleccionado);
   return seleccionado;
   }
 
+// función que asegura que se ingrese 8 números si o si
 function validarNumeroDocumento (){
     let texto = document.getElementById("numeroDocumento").value;
     let etiqueta = document.getElementById("etiquetaNumeroDocumento");
@@ -156,11 +147,11 @@ function validarNumeroDocumento (){
         etiqueta.innerText = "Ingrese sólo 8 digitos";
         etiqueta.style.color = "red";
         document.getElementById("numeroDocumento").value = "";
-        document.getElementById("numeroDocumento").focus();    
-        
+        document.getElementById("numeroDocumento").focus();        
     }
 }
 
+// asegura que la dirección de correo ingresada tenga un caracter arroba y un punto
 function validarEmail (){
     let texto = document.getElementById("email").value;
     let etiqueta = document.getElementById("etiquetaEmail");
@@ -177,6 +168,7 @@ function validarEmail (){
     }
 }
 
+// función que asegura que el comentario no se encuentre vacío
 function validarComentario (){
     let texto = document.getElementById("comentario");
     let comentario = texto.value.trim()
@@ -192,6 +184,7 @@ function validarComentario (){
         etiqueta.style.color = "black";
     }
 }
+
 function irAlIndex() {
     window.location.href = "index.html";
   }
