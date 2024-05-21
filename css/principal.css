@@ -5,6 +5,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body{
+    min-width: 400px;
+}
+
 .padre{
     /* background-color: #124076; */
     display:flex;
@@ -149,41 +153,89 @@
     
 }
 
+/* Contenedor del Carousel y de los Puntos */
 .contenedor{
     width: 100%;
-    height: 75vh;
-    /* max-width: 350px; */
-    background-color: rgb(214, 240, 98);
-    /* border-radius: 5px; */
-    /* margin: 20px auto; */
+    /* background-color: rgb(214, 240, 98); */
     overflow: hidden;
-    /* box-shadow: 0 0 0 5px #d0cece, 0 15px 50px; */
     position: relative;
 }
 
+/* Contenedor de las imágenes y los botones flechas */
 .carousel{
-    display: flex;
-    width: 400%;
-    /* height: 500px; */
-    /* background-color: burlywood; */
-    margin-top: -120px;
-    margin-left: -100%;
+    position: relative;
+    margin:auto;
 }
 
-.items{
-    width: 100%;
-    /* text-align: center; */
-    /* background-color: yellowgreen; */
+/* Oculta las imágenes */
+.oculta{
+    display: none;
+}
+
+/* Botones Anterior y Siguinte */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    transition: background-color 1s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    /* background-color: rgba(0,0,0,0.8); */
+    /* background-color: #c3570f; */
+    background-color: rgba(252, 88, 33, 0.6);
+  }
+
+.punto {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1.5s ease;
+}
+  
+.active, .punto:hover {
+    background-color: #717171;
+}
+
+.aparece {
+    animation-name: aparece;
+    animation-duration: 3s;
+}
+  
+@keyframes aparece {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.puntos{
+    position: absolute;
+    bottom: 0;
+    left: 46%;
 }
 
 .carousel img{
     display: block;
     width: 100%;
-    /* max-width: 350px; */
-    height: 100%;
     margin: auto;
-    /* padding: auto; */
-    /* object-fit: cover; */
 }
 
 .botones{
