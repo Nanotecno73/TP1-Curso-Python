@@ -2,21 +2,26 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Poppins", sans-serif;
 }
-
-body{
-    min-width: 400px;
-}
+/* 
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+   */
 
 .padre{
     /* background-color: #124076; */
     display:flex;
     flex-flow: column;
     /* position: relative; */
+    /* padding-top: 2em; */
 }
 
-.header{
+
+header{
     position: relative;
 }
 
@@ -73,20 +78,33 @@ body{
     cursor:text;
 }
 
+.usuario{
+    margin-right: 1em;
+}
+
 .navegador{
-    display: flex;
-    flex-flow: row wrap;
+    /* display: flex;
+    flex-flow: row wrap; */
     background-color: black;
     padding: 10px;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     /* z-index: 2;     */
 }
 
 .navegador li{
     list-style-type: none;
-    margin: 0 2em;
+    margin: 0 4.5em;
     font-size: 0.9em;
 }
+
+nav ul li{
+    display: inline-block;
+}
+
+/* nav {
+    margin: auto;
+} */
+
 
 .navegador a{
     /* background-color: #F9E897; */
@@ -98,8 +116,106 @@ body{
     padding: 0 0.2em;
 }
 
-.usuario{
-    margin-right: 1em;
+.navegador a:hover{
+    color: #c3570f;
+    background-color: #d1cdcb;
+    padding: 0.2em 0.2em;
+    border-radius: 5px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: aliceblue;
+    float: right; 
+    margin: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+    float: right;
+}
+
+@media (max-width: 858px){
+    .logo img{
+        margin: -2em 0 0 0.8em;
+        max-height: 8em;   
+    }
+
+    .panel-sup{
+        grid-template-columns: 1fr 2fr 1fr;
+        max-height: 70px;
+        width: 80%;
+        margin-left: 3%;
+    }
+        
+    .barrabusqueda input{
+        height: 3em;
+    }
+    
+    .barrabusqueda img{
+        left: 0.5em;
+    }
+    
+    .usuario{
+        margin-right: 1em;
+    }
+    
+
+.checkbtn{
+    display: block;
+    margin-top: -7%; 
+    margin-right: 10%;
+    /* posicion hamburguesa */
+    z-index: 2; 
+}
+ul{
+    position: fixed;
+    width: 40%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 75px;
+    /* left: -100%; */
+    top: -100%;
+    left: 100%;
+    text-align: center;
+    transition: all .5s;
+}
+nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    color: aliceblue;
+    text-align: center;
+}
+nav ul li a{
+    font-size: 30px;
+    /* padding: 30px 0px; */
+    padding-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* li a:hover, li a.active{
+    background: none;
+    color: red;
+} */
+
+li{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+#check:checked ~ ul{
+    /* left:60%; */
+    top:7.6%;
+    left: 60%;
+    z-index: 1;
+}
+/* nav img{
+    margin-top: -20%;
+    z-index: 5;
+} */
 }
 
 /* div a{
@@ -108,12 +224,7 @@ body{
     margin: 0 10px;
 } */
 
-.navegador a:hover{
-    color: #c3570f;
-    background-color: #d1cdcb;
-    padding: 0.2em 0.2em;
-    border-radius: 5px;
-}
+
 
 .carrito{
     /* background-color: #F9E897; */
@@ -123,11 +234,11 @@ body{
     /* margin-right: 15px; */
 }
 
-.section {
-    /* background-color: #7F9F80; */
+/* .section {
+    background-color: #7F9F80; 
     
         
-}
+} */
 .productos{
     background-color: #FFC374;
     display: grid;
@@ -138,22 +249,35 @@ body{
     display: grid;
     align-items: center;
     text-align: center
-
-    
-
 }
 
 .texto-principal{
+    padding-top: 1em;
     text-align: center;
 
 }
 
 .texto-secundario{
-    text-align: center;
-    
+    width: 70%;
+    margin: auto;
+    text-align: center;  
 }
 
-/* Contenedor del Carousel y de los Puntos */
+
+/* 
+.contenedor{
+    width: 100%;
+    height: 75vh; 
+    /* max-width: 350px; */
+    /* background-color: rgb(214, 240, 98); */
+    /* border-radius: 5px; */
+    /* margin: 20px auto; */
+    /* overflow: hidden; */
+    /* box-shadow: 0 0 0 5px #d0cece, 0 15px 50px; */
+   /*  position: relative;
+} */
+
+/* Contenedor del Carousel y de los Puntos______________________________________ */
 .contenedor{
     width: 100%;
     /* background-color: rgb(214, 240, 98); */
@@ -249,7 +373,7 @@ body{
     text-align: center;
     font-size: 2.5em;
     /* font-weight: bold; */
-    font-family: monospace;
+    font-family: "Poppins", sans-serif;
     cursor: pointer;
 }
 
@@ -265,7 +389,7 @@ body{
     background-color: rgba(235, 227, 227, 0.7);
 }
 
-.footer {
+footer {
     /* background-color: #7F9F80; */
     text-align: center;
     /* background-color: rgb(244, 135, 63) */
@@ -341,3 +465,273 @@ body{
     margin-left: 5%;
 
 }
+
+
+/* ------------------------Estilos Catalogo----------------------------------- */
+/* Estilo contenedor Cel. Motorola */
+main{
+    padding-bottom: 3em;
+}
+#moto {
+	margin: auto;
+	padding-top: 5%;
+	align-content: center;
+   	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	row-gap: 1.8em;
+	gap: 0.18em;
+}
+
+/* Estilo contenedor Cel. Samsung */
+#samsung {
+	margin: auto;
+	padding-top: 5%;
+	align-content: center;
+   	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	row-gap: 1.8em;
+	gap: 0.18em;
+}
+
+/* Estilo contenedor Cel. Xiaomi */
+#xiao {
+	margin: auto;
+	padding-top: 5%;
+	align-content: center;
+   	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	row-gap: 1.8em;
+	gap: 0.18em;
+}
+
+/* Estilo botones filtro por marca de cel */
+#filtro {
+	margin: auto;
+	padding-top: 3em;
+	padding-bottom: 0.5em;
+	align-content: center;
+   	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	column-gap: 4em;
+}
+
+#filtro  button{
+	width: 10em;
+	padding: 0.1em; 
+	font-family: "Poppins", sans-serif;
+	font-size: 0.8em;
+    font-weight: bold;
+	color:rgb(59, 27, 4);
+	box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2), 0 0.4em 1.2em 0 rgba(0,0,0,0.19);
+	border: 0.125em solid rgba(195, 87, 15, 0.2);
+	border-radius: 0.3em;
+    background-color: rgba(195, 87, 15, 0.5);
+}
+
+#filtro button {
+	transition-duration: 0.4s;
+  }
+  
+  #filtro button:hover {
+	background-color: rgb(252, 88, 33); 
+	color: white;
+  }
+
+/* Estilo contenedor imagen celular, modelo y precio */
+.articulo img {
+	width: 9em;
+	transition: all 300ms;
+	position: relative;
+	margin: 0em;
+	}
+
+.articulo img:hover {
+	transform: scale(1.15);
+	}
+
+/* Estilo modelo */
+.mod {
+	color: rgb(4, 59, 101);
+	font-size: 0.8em;
+	font-weight: bold;
+	padding: 0.3em;
+	margin: 0em;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+}
+
+/* Estilo precio */
+.pre {
+	color: rgb(252, 67, 5);
+	font-size: 0.8em;
+	font-weight: bolder;
+	padding: 0em;
+	margin: 0.6em;
+	margin-bottom: 1em;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
+	box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2), 0 0.4em 1.2em 0 rgba(0,0,0,0.19);
+}
+
+/* ---------Estilos pagina Producto -------- */
+
+/* Contenedor Principal */
+.contPrincipal{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2.5em 0;
+	font-family: "Poppins", sans-serif;
+	color: rgb(4, 59, 101);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.textoProd{
+    font-size: 0.8em;
+    margin: 1em;
+}
+
+/* Contenedor Imagen Celular */
+.contFoto img {
+	width: 23em;
+}
+#precioProd{
+    color: rgb(252, 88, 33);
+}
+
+/* Botón "Comprar" */
+.bcomprar{
+	display: block;
+	width: auto;
+	padding: 0.5em;
+	margin-top: 1em;
+	background-color: rgb(252, 88, 33);
+	color: aliceblue;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 0.25em;
+	border-color: rgb(252, 88, 33);
+	transition-duration: 0.4s;
+}
+
+.bcomprar:hover {
+	background-color: aliceblue; 
+	color: rgb(177, 14, 14);
+  }
+
+/* Estilo dispositivo medio */
+@media screen and (max-width: 900px) {
+	
+	.articulo{
+		margin-bottom: 2em;
+	}
+
+	.articulo img{
+		width: 16em;
+	}
+
+	#filtro  {
+		grid-template-columns: repeat(2, auto);
+		margin: auto;
+	} 
+
+	#filtro button {
+		margin-bottom: 1em;
+        width: 12em;
+        padding: 0.5em; 
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+        } 
+	
+	#moto {grid-template-columns: repeat(2, auto); 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	#samsung {grid-template-columns: repeat(2, auto); 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	#xiao {grid-template-columns: repeat(2, auto); 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+		.contPrincipal {grid-template-columns: auto;
+		}	
+
+        /* estilos Producto */
+	.contFoto{
+		margin: auto;
+	}
+	.contTexto {
+		text-align: center;
+		}
+
+	.bcomprar{
+			margin-left: auto;
+			margin-right: auto;
+	}
+	
+}
+
+/* Estilo dispositivo pequeño */
+@media screen and (max-width: 600px) {
+
+	.articulo{
+		margin-bottom: 2em;
+	}
+
+	.articulo img{
+		width: 24em;
+	}
+	
+	 #filtro  {
+		grid-template-columns: auto;
+	} 
+
+	#filtro button {
+		margin-bottom: 1em;
+        width: 12em;
+        padding: 0.2em; 
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5em;
+        } 
+	#moto {grid-template-columns: auto; 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	#samsung {grid-template-columns: auto; 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	#xiao {grid-template-columns: auto; 
+		padding-left: 0; padding-right: 0; 
+		margin-left: 0;margin-right: 0;}
+
+	.contPrincipal {grid-template-columns: auto;
+		}	
+	.contFoto{
+		margin: auto;
+	}	
+	.contTexto {
+		text-align: center;
+	}
+	.bcomprar{
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/* Estilos pagina Nosotros */
+.nos{
+    /* width: 70%; */
+    margin: auto;
+    text-align: center;
+}
+
