@@ -1,0 +1,146 @@
+/* *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+} */
+
+*{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.padre{
+    background-color: #124076;
+    display:flex;
+    flex-flow: column;
+
+}
+
+.header{
+    background-color: #7F9F80;
+    
+}
+    .menu{
+        background-color: #FFC374;
+        display: grid;
+        grid-template-columns: 1fr 5fr 2fr;
+
+    }
+        .logo{
+            background-color: #F9E897;
+            text-align: center;
+
+        }
+        .nav{
+            background-color: #F9E897;
+            text-align: center;
+    
+        }
+        .social{
+            background-color: #F9E897;
+            text-align: center;
+        }
+
+.main{
+    display: flex;
+    /* background-color: #7F9F80; */
+    text-align: center;
+    align-items: center;
+    justify-content:space-around;   
+}
+
+.carousel{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(249, 232, 151);
+}
+
+.carousel a{
+    font-size: 3em;
+    color: rgb(202, 163, 141);
+}
+
+.carousel a:hover{
+    color: rgb(249 232 151);
+    background-color: rgb(202, 163, 141);
+}
+
+.productos{
+    background-color: #F9E897;
+}
+
+.footer {
+    background-color: #7F9F80;
+    text-align: center;
+
+}
+    .pie{
+        background-color: #FFC374;
+    }
+
+
+body{
+    /* text-align: center; */
+    margin: 0px;
+    padding: 0px;
+}
+
+.carousel-frame{
+    display: inline-block;
+    height: 400px;
+    width: 800px;
+    overflow:hidden;
+    /* border: 1.2px solid grey; */
+    box-shadow: 8px 8px 16px;
+    padding: 0px;
+    margin: 20px 0px;
+}
+
+.section a{
+    font-size: 4em;
+    padding: 0px, 50px;
+    
+}
+
+.carousel-frame ul{
+    display: flex;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    /* margin-left: -1600px; */
+    animation-name: slider;
+    animation-duration: 15s;
+    animation-timing-function:ease;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes slider{
+    0%{margin-left: 0px;}
+    5%{margin-left: 0px;}
+
+    28.3%{margin-left: -400px;}
+    38.3%{margin-left: -400px;}
+
+    61.66%{margin-left: -800px;}
+    71.66%{margin-left: -800px;}
+
+    95%{margin-left: -1200px;}
+    100%{margin-left: -1200px;}
+}
+
+.carousel-frame li{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.carousel-frame img{
+    width: 400px;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
