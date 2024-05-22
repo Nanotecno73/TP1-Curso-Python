@@ -17,8 +17,9 @@ function verificarDatos() {
         document.getElementById("divConfirmacion").style.visibility = "hidden";//el mensajae de confirmación está oculto
         return;
     } else {
-        //mostramos los datos recibidos por el formulario .
-        document.getElementById("formulario").style.visibility = "hidden"; // escondemos el formulario
+        // alert("Datos enviados");
+        //mostramos los datos recibidos por el formulario.
+        document.getElementById("formulario").style.display = "none"; // escondemos el formulario
         document.getElementById("divConfirmacion").style.visibility = "visible";//mostramos el mensajae de confirmación
         document.getElementById("mostrarNombre").textContent = "Nombre: "+document.getElementById("nombre").value.toUpperCase();
         document.getElementById("mostrarApellido").textContent = "Apellido: " + document.getElementById("apellido").value.toUpperCase();
@@ -29,7 +30,8 @@ function verificarDatos() {
         document.getElementById("mostrarNumeroDocumento").textContent = "Número de documento: " + document.getElementById("numeroDocumento").value;
         document.getElementById("mostrarEmail").textContent = "Email: " + document.getElementById("email").value;
         document.getElementById("mostrarComentario").textContent = "Comentario: " + document.getElementById("comentario").value.toUpperCase();
-        document.getElementById("mostrarArchivo").textContent = "Nombre Archivo Adjunto: " + document.getElementById("archivo").value.toUpperCase(); 
+        document.getElementById("mostrarArchivo").textContent = "Nombre Archivo Adjunto: " + document.getElementById("archivo").value;
+
     }
 }
 
@@ -43,7 +45,7 @@ function borrarFormulario() {
 }
 
 window.onload = function () {
-    // cuando carga la venetana el mensaje de confirmación se carga oculto.
+    // cuando carga la ventana el mensaje de confirmación se carga oculto.
     document.getElementById("divConfirmacion").style.visibility = "hidden";
 }
 
@@ -79,7 +81,7 @@ function validarApellido (){
     }
 }
 
-// esta fúnción valida que la fecha de nacimiento no sea mayor a la fecha actual
+// esta función valida que la fecha de nacimiento no sea mayor a la fecha actual
 function validarFechaNacimiento (){
     let fecha = document.getElementById("fechaNacimiento").value;
     let fechaNacimiento = new Date(fecha);
@@ -89,6 +91,7 @@ function validarFechaNacimiento (){
 
     // Comparar la fecha de nacimiento con la fecha actual
     if (fechaNacimiento > fechaActual) {
+        //alert("");
         etiqueta.innerText = "La fecha de nacimiento no puede ser mayor que la fecha actual.";
         etiqueta.style.color = "red";
         document.getElementById("fechaNacimiento").value = "";
@@ -115,6 +118,7 @@ function validarEdad(){
         //alert("La fecha de nacimiento y la edad coinciden.");
         etiqueta.innerText = "Edad";
         etiqueta.style.color = "black";
+
     } else {
         //alert("La fecha de nacimiento y la edad no coinciden.");
         etiqueta.innerText = "Edad Incorrecta.";
@@ -131,6 +135,7 @@ function mostrarSexo() {
         break;
       }
     }
+  //   alert("Selección: " + seleccionado);
   return seleccionado;
   }
 
@@ -147,7 +152,8 @@ function validarNumeroDocumento (){
         etiqueta.innerText = "Ingrese sólo 8 digitos";
         etiqueta.style.color = "red";
         document.getElementById("numeroDocumento").value = "";
-        document.getElementById("numeroDocumento").focus();        
+        document.getElementById("numeroDocumento").focus();    
+        
     }
 }
 
@@ -188,3 +194,5 @@ function validarComentario (){
 function irAlIndex() {
     window.location.href = "index.html";
   }
+
+
