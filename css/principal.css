@@ -88,6 +88,7 @@ header{
     background-color: black;
     padding: 10px;
     justify-content: center;
+    height: 60%; /*agregue esta línea y así se achicó el menú*/
 }
 
 .navegador li{
@@ -187,7 +188,8 @@ ul{
 }
 nav ul li{
     display: block;
-    margin: 4em 0;
+    /* margin: 4em 0; modifiqué esta línea por la siguiente */
+    margin: 0.1em 0;
     /* line-height: 30px; */
     color: aliceblue;
     text-align: center;
