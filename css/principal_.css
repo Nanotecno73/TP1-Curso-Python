@@ -83,17 +83,17 @@ header{
 }
 
 .navegador{
-    display: flex;
-    flex-flow: row wrap; 
+    /* display: flex;
+    flex-flow: row wrap; */
     background-color: black;
     padding: 10px;
-    justify-content: center;
+    /* justify-content: space-around; */
+    /* z-index: 2;     */
 }
 
 .navegador li{
     list-style-type: none;
-    margin-left: 3em;
-    margin-right: 3em;
+    margin: 0 4.5em;
     font-size: 0.9em;
 }
 
@@ -165,14 +165,11 @@ nav ul li{
 
 .checkbtn{
     display: block;
-    /* margin-top: -7%; 
-    margin-right: 10%; */
-    margin-top: -2em; 
-    margin-right: 0.5em;
+    margin-top: -7%; 
+    margin-right: 10%;
     /* posicion hamburguesa */
     z-index: 2; 
 }
-
 ul{
     position: fixed;
     width: 40%;
@@ -187,16 +184,16 @@ ul{
 }
 nav ul li{
     display: block;
-    margin: 4em 0;
-    /* line-height: 30px; */
+    margin: 50px 0;
+    line-height: 30px;
     color: aliceblue;
     text-align: center;
 }
 nav ul li a{
-    font-size: 3.5vw;
+    font-size: 30px;
     /* padding: 30px 0px; */
-    /* padding-top: 20px;
-    margin-bottom: 20px; */
+    padding-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
 }
 /* li a:hover, li a.active{
@@ -205,8 +202,8 @@ nav ul li a{
 } */
 
 li{
-    padding-bottom: 1.2em;
-    padding-top: 1.2em;
+    padding-bottom: 20px;
+    padding-top: 20px;
     text-align: center;
 }
 #check:checked ~ ul{
@@ -214,15 +211,6 @@ li{
     top:7.6%;
     left: 60%;
     z-index: 1;
-}
-
-.navegador{
-    /* display: flex; */
-    display: block;
-    /* flex-flow: row wrap;  */
-    background-color: black;
-    padding: 1em;
-    justify-content: center;
 }
 /* nav img{
     margin-top: -20%;
@@ -654,7 +642,6 @@ main{
 
 /* Estilo dispositivo medio */
 @media screen and (max-width: 900px) {
-
 	
 	.articulo{
 		margin-bottom: 2em;
@@ -709,9 +696,7 @@ main{
 
 /* Estilo dispositivo pequeño */
 @media screen and (max-width: 600px) {
-   /*  nav ul li a{
-        font-size: 5vw;
-    } */
+
 	.articulo{
 		margin-bottom: 2em;
 	}
