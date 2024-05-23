@@ -413,7 +413,7 @@ footer {
     margin-top: 5px;
 }
 
-/* clase agregada por Fabiana para el formulario - falta terminar, está incompleto*/
+/* clase agregada por Fabiana para el formulario */
 /* ***********************formulario***************************************** */
 .contenedorFormulario {
     /* width: 100%; */
@@ -431,6 +431,20 @@ footer {
     padding: 2% 5% 1%;
     border-radius: 15px ;
     box-shadow: #3d3303 10px 10px 20px;
+    /* font-size: 16px; */
+}
+/*   tamaño de letras responsivas para el formularios */
+
+@media (max-width: 768px) {
+    .contenedorFormulario {
+        font-size: 14px; /* Tamaño de letra para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedorFormulario {
+        font-size: 12px; /* Tamaño de letra para pantallas aún más pequeñas */
+    }
 }
 
 .divItem{
@@ -735,3 +749,14 @@ main{
     text-align: center;
 }
 
+/* ****************** iframe responsivo ***************************** */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+}
+@media (max-whidth: 767px){
+    iframe{
+        height:300px;
+    }
+}
