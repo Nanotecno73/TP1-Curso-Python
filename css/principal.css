@@ -413,6 +413,34 @@ li{
     background-color: rgba(235, 227, 227, 0.7);
 }
 
+/* Habilita las imagenes a mostrar en tablets */
+@media (max-width: 1100px){
+    
+    .imgGrupo1{
+        display: none!important;
+    }
+    .imgGrupo2{
+        display:block!important;
+    }
+    .imgGrupo3{
+        display: none!important;
+    }
+}
+
+/* Habilita las imagenes a mostrar en móviles */
+@media (max-width: 720px){
+    
+    .imgGrupo1{
+        display: none!important;
+    }
+    .imgGrupo2{
+        display: none!important;
+    }
+    .imgGrupo3{
+        display: block!important;
+    }
+}
+
 footer {
     /* background-color: #7F9F80; */
     text-align: center;
