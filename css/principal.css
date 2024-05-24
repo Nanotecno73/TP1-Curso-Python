@@ -150,7 +150,7 @@ nav ul li{
         width: 80%;
         margin-left: 3%;
     }
-        
+       
     .barrabusqueda input{
         height: 3em;
     }
@@ -176,9 +176,12 @@ nav ul li{
 
 ul{
     position: fixed;
-    width: 40%;
-    height: 100vh;
-    background: #2c3e50;
+    width: auto;
+    height: auto !important;
+    /* background: #50372c; */
+    /* background-color: #c3570f; */
+    opacity: 0.8;
+
     top: 75px;
     /* left: -100%; */
     top: -100%;
@@ -189,8 +192,9 @@ ul{
 nav ul li{
     display: block;
     /* margin: 4em 0; modifiqué esta línea por la siguiente */
-    margin: 0.1em 0;
+    /* margin: 0.1em 0.1em; */
     /* line-height: 30px; */
+    /* background-color: #c3570f; */
     color: aliceblue;
     text-align: center;
 }
@@ -209,6 +213,7 @@ nav ul li a{
 li{
     padding-bottom: 1.2em;
     padding-top: 1.2em;
+    /* margin: 0.5em; */
     text-align: center;
 }
 #check:checked ~ ul{
@@ -293,16 +298,19 @@ li{
 
 /* Contenedor del Carousel y de los Puntos______________________________________ */
 .contenedor{
-    width: 100%;
+    /* width: 100%; */
+    height: 100%;
     /* background-color: rgb(214, 240, 98); */
     overflow: hidden;
     position: relative;
+    display: inline-block;
 }
 
 /* Contenedor de las imágenes y los botones flechas */
 .carousel{
     position: relative;
     margin:auto;
+    /* height: 100%; */
 }
 
 /* Oculta las imágenes */
@@ -354,6 +362,8 @@ li{
     background-color: #717171;
 }
 
+/* Clase para animación de las imagenes del carrusel */
+
 .aparece {
     animation-name: aparece;
     animation-duration: 3s;
@@ -366,7 +376,7 @@ li{
 
 .puntos{
     position: absolute;
-    bottom: 0;
+    bottom: 3em;
     left: 46%;
 }
 
@@ -412,7 +422,7 @@ footer {
     padding: 3px 10px;
 }
 
-.footer h5{
+.pie h5{
     border-bottom: 1px solid black;
     padding-bottom: 5px;
 }

@@ -21,16 +21,16 @@ let header = `
         <nav>
                 <input type ="checkbox" id="check">
                 <label for ="check" class="checkbtn">
-                <img src="img/burger.png" id="burger" alt="hamburguesa" width="30">
+                    <img src="img/burger.png" id="burger" alt="hamburguesa" width="30">
                 </label>
         
-            <ul class="navegador">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="novedades.html">Novedades</a></li>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <li><a href="formulario.html">Contactanos</a></li>
-                <li><a href="sobrenos.html">Nosotros</a></li>
-            </ul>
+                <ul class="navegador">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="novedades.html">Novedades</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="formulario.html">Contactanos</a></li>
+                    <li><a href="sobrenos.html">Nosotros</a></li>
+                </ul>
         </nav>
 
 `;
